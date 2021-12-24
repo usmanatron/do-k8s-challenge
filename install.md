@@ -60,6 +60,8 @@ kubectl delete -f test-resources.yaml
 
 ## LetsEncrypt config for cert-manager
 
+Don't forget to update these files to add your Email address
+
 ```bash
 kubectl apply -f "issuer_letsencrypt-staging.yml"
 kubectl apply -f "issuer_letsencrypt-prod.yml"
