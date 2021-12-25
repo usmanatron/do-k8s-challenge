@@ -83,7 +83,7 @@ Add DNS A record for `registry.k8s.usmanatron.co.uk`, pointing to the External I
 ## Install trow
 
 ```bash
-helm install -f trow_values.yml trow trow/trow
+helm install -f helm_trow.yml trow trow/trow
 ```
 
 ## Test trow
@@ -92,12 +92,16 @@ helm install -f trow_values.yml trow trow/trow
 
 <https://registry.k8s.usmanatron.co.uk>
 
-### Docker login
+### Docker CLI
 
 Credentials in [helm_trow.yml](./helm_trow.yml)
 
 ```bash
 docker login https://registry.k8s.usmanatron.co.uk
+
+docker pull debian:latest
+docker tag debian:latest registry.k8s.usmanatron.co.uk/debian:latest
+docker push registry.k8s.usmanatron.co.uk/debian:latest
 ```
 
 ## Troubleshooting
