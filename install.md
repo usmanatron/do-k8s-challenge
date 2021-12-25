@@ -78,7 +78,7 @@ kubectl get service ingress-nginx-controller --namespace=ingress-nginx
 
 ## DNS
 
-Add DNS A record for `registry.k8s.usmanatron.co.uk`, pointing to the External IP above. 
+Add DNS A record for `registry.k8s.usmanatron.co.uk`, pointing to the External IP above.
 
 ## Install trow
 
